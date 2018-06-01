@@ -24,9 +24,9 @@ and another div, id="game_over", with a link "play again" if clicked refresh the
 
 Pseudocode:
 
-Algorithm: createInitArray(m,n)
+Algorithm: createInitArray(m,n,k)
 requires: m rows, n columns
-returns: an array that satisfy the conditions, arr[0,0]=0 and all other elements are 1-5
+returns: an array that satisfy the conditions, arr[0,0]=0 and all other elements are 1-k
 
 Algorithm: addGameboard(m,n)
 requires: m rows, n columns
@@ -57,14 +57,26 @@ returns: null
         show game_over div
     }
     
-
+Algorithm changeArray(color)
+requires: a color 1-5
+returns: null
+    
 
 init()
 // arr is the global array
-const color = ["skyblue", "darkblue", "pink", "purple", "orange"]
+const color = ["grey", "skyblue", "darkblue", "pink", "purple", "orange"]
+find the hexadecimal color
+Pink	粉红	#FFC0CB
+Purple	紫色	#800080
+SkyBlue	天蓝色	#87CEEB
+DarkBlue	深蓝色	#00008B
+Orange	橙色	#FFA500
+WhiteSmoke	白烟	#F5F5F5
+
+const color = ["#F5F5F5", "#87CEEB", "#00008B", "#FFC0CB", "#800080", "#FFA500"];
 const m = 20, n = 30;
 
-var arr = createInitArray(m,n);
+var arr = createInitArray(m,n, color.length-1);
 
 addGameboard(m, n);
 addColorButtons();
