@@ -67,6 +67,7 @@ function addColorButtons() {
   iDiv.appendChild(divider);
 }
 function clickHandler() {
+  
   for (i = 0; i < m; i++) {
     for (j = 0; j < n; j++) {
       if (arr[i][j] == parseInt(this.id)) {
@@ -76,18 +77,39 @@ function clickHandler() {
         if (j - 1 >= 0) {
           if (arr[i][j - 1] == 0) arr[i][j] = 0;
         }
-        if (i+1<m){
-            if (arr[i + 1][j] == 0) arr[i][j] = 0;
+        if (i + 1 < m) {
+          if (arr[i + 1][j] == 0) arr[i][j] = 0;
         }
-        if (j+1<n){
-            if (arr[i][j+1] == 0) arr[i][j] = 0;
+        if (j + 1 < n) {
+          if (arr[i][j + 1] == 0) arr[i][j] = 0;
         }
       }
     }
   }
+
+  for (i = m-1; i >=0; i--) {
+    for (j = n-1; j >=0; j--) {
+      if (arr[i][j] == parseInt(this.id)) {
+        if (i - 1 >= 0) {
+          if (arr[i - 1][j] == 0) arr[i][j] = 0;
+        }
+        if (j - 1 >= 0) {
+          if (arr[i][j - 1] == 0) arr[i][j] = 0;
+        }
+        if (i + 1 < m) {
+          if (arr[i + 1][j] == 0) arr[i][j] = 0;
+        }
+        if (j + 1 < n) {
+          if (arr[i][j + 1] == 0) arr[i][j] = 0;
+        }
+      }
+    }
+  }
+
   for (var i = 0; i < m; i++) {
     for (var j = 0; j < n; j++) {
       innerDiv[i][j].style.backgroundColor = color[arr[i][j]];
     }
   }
+
 }

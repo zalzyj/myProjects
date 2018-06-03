@@ -60,7 +60,9 @@ returns: null
 Algorithm changeArray(color)
 requires: a color 1-5
 returns: null
-    
+    for each element, find its neighbours.
+    then all the neighbours are not 0;
+
 
 init()
 // arr is the global array
