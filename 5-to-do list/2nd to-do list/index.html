@@ -1,70 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A Simplest To-do List</title>
-    <style>
-        .close {
-            padding: 2px 6px 2px 6px;
-        }
-        
-        .close:hover {
-            background-color: #f44336;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/todos.css">
+    <script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+    <title>Todo List</title>
 </head>
-
 <body>
-    <h1>To-do List:</h1>
-    <form id="toDoForm">
-        <input id="myInput" type="text">
-        <button type="button" onclick="newElement()">Add</button>
-    </form>
-
-    <h2>
-        <ol id="doDoList">
-            <li>Buy food items <span class="close">&times;</span></li>
-            <li>send daught to school<span class="close">&times;</span></li>
-            <li>attend the meeting<span class="close">&times;</span></li>
-        </ol>
-    </h2>
-
-    <script>
-        var close = document.getElementsByClassName("close");
-        var i;
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
-                var div = this.parentElement;
-                div.style.display = "none";
-            }
-        }
-
-        function newElement() {
-            var li = document.createElement("li");
-            var inputValue = document.getElementById("myInput").value;
-            var t = document.createTextNode(inputValue);
-            li.appendChild(t);
-            document.getElementById("doDoList").appendChild(li);
-            document.getElementById("myInput").value = "";
-
-            var span = document.createElement("SPAN");
-            var txt = document.createTextNode("\u00D7");
-            span.className = "close";
-            span.appendChild(txt);
-            li.appendChild(span);
-
-            for (i = 0; i < close.length; i++) {
-                close[i].onclick = function() {
-                    var div = this.parentElement;
-                    div.style.display = "none";
-                }
-            }
-        }
-    </script>
+    
+    <script type="text/javascript" src="assets/js/todos.js"></script>
 </body>
-
 </html>
