@@ -23,3 +23,5 @@ These are some small web apps. Welcome to everyone who are interested and contri
 8) Game: Color walk
 
 9) Movie Info: you can find your favourate movies and get information accordingly.
+
+10) AJAX: some AJAX projects
