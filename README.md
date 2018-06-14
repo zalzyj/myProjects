@@ -18,7 +18,7 @@ These are some small web apps. Welcome to everyone who are interested and contri
 
 6) Stopwatch (object-oriented programming)
 
-7) Project Manager (React)
+7) Testing with Jasmine
 
 8) Game: Color walk
 
