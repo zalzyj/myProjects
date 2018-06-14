@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ensure that all the Jasmine files come before all the Angular files... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.css"></link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.js"></script>
+
+    <title>Jasmine</title>
+    <script>
+        var earth = { isRound: true, numberFromSun: 3 }
+        describe("Earth", function () {
+            it("is round", function () {
+                expect(earth.isRound).toBeTruthy()
+            });
+            it("is the third planet from the sun", function () {
+                expect(earth.numberFromSun).toBe(3)
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
